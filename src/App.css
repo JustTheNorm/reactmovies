@@ -1,4 +1,7 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,200;1,200&family=Poppins:wght@400;500;600&family=Silkscreen&display=swap');
+
 body{
+  font-family: 'Montserrat', sans-serif;
   background: #141414;
   color: white;
 }
@@ -9,8 +12,9 @@ body{
 }
 
 .movie-poster{
-  height: 250px;
-  width: 150px;
+  height: 240px;
+  width: 160px;
+  padding: 10px
 }
 
 .image-container{
@@ -34,12 +38,62 @@ body{
 .overlay{
   position: absolute;
   background: rgba(0,0,0,0.8);
-  width: 120%;
+  width: 98%;
   transition: 0.5s ease;
   opacity: 0;
   bottom: 0;
   font-size: 20px;
-  padding: 20px;
+  padding: 15px;
   text-align: center;
+  
 
+}
+
+.font{
+  font-family: 'Poppins', sans-serif;
+}
+
+::-webkit-scrollbar {
+  width: 2em;
+}
+
+::-webkit-scrollbar-track{
+  background: #141414;
+  border-radius: 100vw;
+  margin-block: .5em;
+}
+
+::-webkit-scrollbar-thumb{
+  background: #4D4D4D;
+  border: .25em solid #141414;
+  border-radius: 100vw;
+}
+::-webkit-scrollbar-thumb:hover{
+ background: #5E5E5E;
+}
+
+
+.box h1::after {
+  content: "";
+  width: 2px;
+  height: 35px;
+  background: white;
+  display: inline-block;
+}
+
+.box h1 {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+}
+
+@keyframes cursor-blink {
+  0% {
+    opacity: 0;
+  }
+}
+
+.box h1::after {
+  /*code commented for brevity*/
+  animation: cursor-blink 1.5s steps(2) infinite;
 }

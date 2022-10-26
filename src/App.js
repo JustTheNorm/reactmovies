@@ -9,6 +9,30 @@ import SearchBox from "./components/SearchBox";
 import AddFavorites from "./components/AddFavorites";
 import RemoveFavorites from "./components/RemoveFavorites";
 
+
+
+const subtitle = `N.P Movies`
+
+
+//Typing animation
+const useTypedSuperpower = () => {
+  const [typedWord, settypedWord] = useState(``)
+  useEffect(()=> {
+    const nexttypedWord = subtitle.slice(0, typedWord.length)
+    const timeout = setTimeout(()=>{
+      settypedWord(subtitle.slice(0, typedWord.length + 1))
+    }, 175)
+    return () => clearTimeout(timeout)
+  }, [typedWord])
+  
+  return typedWord
+}
+
+
+
+
+
+
 function App() {
   // state to hold the movie data
   const [movie, setMovie] = useState(null);
@@ -50,8 +74,10 @@ function App() {
     const movieFavorites = JSON.parse(
       localStorage.getItem(`react-movie-app-favorites`)
     );
+      if(movieFavorites){
 
-    setFavorites(movieFavorites)
+        setFavorites(movieFavorites)
+      }
   }, []);
 
   const saveToLocalStorage = (items) => {
@@ -72,10 +98,12 @@ function App() {
       saveToLocalStorage(newFavoriteList)
   }
 
+const subtitle = useTypedSuperpower()
+
   return (
-    <div className="container-fluid movie-app">
-      <div className="row d-flex align-items-center mt-4 mb-4">
-        <MovieListHeader heading="N.P Movies" />
+    <div className="container-fluid movie-app ">
+      <div className="row d-flex align-items-center mt-4 mb-4 ">
+        <MovieListHeader heading={subtitle} className="box" />
         <SearchBox searchValue={searchValue} setSearchValue={setSearchValue} />
       </div>
       <div className="row">
