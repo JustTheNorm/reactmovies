@@ -103,8 +103,8 @@ const subtitle = useTypedSuperpower()
 
   return (
     <div className="container-fluid movie-app ">
-      <div className="row d-flex align-items-center mt-4 mb-4 ">
-        <MovieListHeader heading={subtitle} className="box" />
+      <div className="row mt-4 mb-4 ">
+        <MovieListHeader heading={subtitle} className="align-items-center box" />
         <SearchBox searchValue={searchValue} setSearchValue={setSearchValue} />
       </div>
       <div className="row">
