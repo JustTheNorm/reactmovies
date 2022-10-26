@@ -76,12 +76,9 @@ function App() {
     );
       if(movieFavorites){
 
-<<<<<<< HEAD
         setFavorites(movieFavorites)
       }
-=======
 //     setFavorites(movieFavorites)
->>>>>>> 08e78a776cd78f06b4cc061b99b5b3b55c0a9ff6
   }, []);
 
   const saveToLocalStorage = (items) => {
