@@ -1,4 +1,4 @@
-![alt text](https://raw.githubusercontent.com/JustTheNorm/reactmovies/Main/public/npmovies.png)
+![alt text](https://raw.githubusercontent.com/JustTheNorm/reactmovies/main/public/npmovies.png)
 
 # Getting Started with Create React App
 
